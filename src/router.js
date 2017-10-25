@@ -9,6 +9,7 @@ export const loginRouter = {
     component: resolve => { require(['./views/login.vue'], resolve); }
 };
 
+
 export const page404 = {
     path: '/*',
     name: 'error_404',
@@ -183,17 +184,24 @@ export const appRouter = [
         access: 0,
         component: Main,
         children: [
-            
             { path: 'index', title: '商品发布', name: 'mall', component: resolve => { require(['./views/mall/mall.vue'], resolve); } }
         ]
     },
 ];
 
+export const appTop=[
+    {
+    path: '/mall/send',
+    name: 'send',
+    component: resolve => { require(['./views/index/CommodityRelease.vue'], resolve); }
+    }
+]
 export const routers = [
     loginRouter,
     otherRouter,
     preview,
     locking,
+    ...appTop,
     ...appRouter,
     page500,
     page401,

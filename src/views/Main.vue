@@ -14,21 +14,8 @@
         <div class="main-header-con" :style="{paddingLeft: hideMenuText?'60px':'200px'}">
             <div class="main-header">
                 <div class="header-middle-con">
-                    <Dropdown placement="bottom-start">
-                <a href="javascript:void(0)" style="color:#495060">
-                   商品发布
-                </a>
-                    <DropdownMenu slot="list">
-                    <DropdownItem>商品发布</DropdownItem>
-                    <DropdownItem> 出售中的商品</DropdownItem>
-                    <DropdownItem> 仓库中的商品</DropdownItem>
-                    <DropdownItem> 库存日志</DropdownItem>
-                    <DropdownItem> 商品规格</DropdownItem>
-                    </DropdownMenu>
-                </Dropdown>
-                
+                 <NavTop />
                 </div>
-    
                 <div class="header-avator-con">
                     <div @click="handleFullScreen" v-if="showFullScreenBtn" class="full-screen-btn-con">
                         <Tooltip :content="isFullScreen ? '退出全屏' : '全屏'" placement="bottom">
@@ -86,6 +73,7 @@ import tagsPageOpened from "./main_components/tagsPageopened.vue";
 import breadcrumbNav from "./main_components/breadcrumbNav.vue";
 import themeDropdownMenu from "./main_components/themeDropdownMenu.vue";
 import sidebarMenuShrink from "./main_components/sidebarMenuShrink.vue";
+import NavTop from "./Navigation/NavTop.vue";
 import Cookies from "js-cookie";
 import util from "../libs/util.js";
 
@@ -95,7 +83,8 @@ export default {
     tagsPageOpened,
     breadcrumbNav,
     themeDropdownMenu,
-    sidebarMenuShrink
+    sidebarMenuShrink,
+    NavTop
   },
   data() {
     return {
