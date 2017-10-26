@@ -74,7 +74,6 @@ import breadcrumbNav from "./main_components/breadcrumbNav.vue";
 import themeDropdownMenu from "./main_components/themeDropdownMenu.vue";
 import sidebarMenuShrink from "./main_components/sidebarMenuShrink.vue";
 import Menu from "./Menu/Menu.vue";
-
 import Cookies from "js-cookie";
 import util from "../libs/util.js";
 

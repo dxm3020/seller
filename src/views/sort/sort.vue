@@ -4,6 +4,4 @@
                 <Breadcrumb-item href="/components/breadcrumb">商家</Breadcrumb-item>
                 <Breadcrumb-item>出售的商品</Breadcrumb-item>
             </Breadcrumb>
-           
-
 </template>

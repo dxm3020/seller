@@ -196,19 +196,12 @@ export const appRouter = [
    
 ];
 
-export const appTop=[
-    {
-    path: '/mall/send',
-    name: 'send',
-    component: resolve => { require(['./views/index/CommodityRelease.vue'], resolve); }
-    }
-]
+
 export const routers = [
     loginRouter,
     otherRouter,
     preview,
     locking,
-    ...appTop,
     ...appRouter,
     page500,
     page401,
