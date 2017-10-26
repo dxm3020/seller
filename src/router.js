@@ -169,11 +169,11 @@ export const appRouter = [
     {
         path: '/error-page',
         icon: 'android-sad',
-        title: '错误页面',
+        title: ' 出售中的商品',
         name: 'errorpage',
         component: Main,
         children: [
-            { path: 'index', title: '错误页面', name: 'errorpage_index', component: resolve => { require(['./views/error_page/error-page.vue'], resolve); } }
+            { path: 'index', title: ' 出售中的商品', name: 'errorpage_index', component: resolve => { require(['./views/error_page/error-page.vue'], resolve); } }
         ]
     },
     {

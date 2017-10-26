@@ -77,6 +77,7 @@ const store = new Vuex.Store({
         routers: [
             otherRouter,
             ...appRouter
+        
         ],
         menuList: [],
         tagsList: [...otherRouter.children],

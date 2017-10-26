@@ -2,7 +2,13 @@
     @import './mall.less';
 </style>
 <template>
+
 <div class=".wp_sor">
+    <Breadcrumb>
+                <Breadcrumb-item href="/">商家管理中心</Breadcrumb-item>
+                <Breadcrumb-item href="/components/breadcrumb">商家</Breadcrumb-item>
+                <Breadcrumb-item>选择商品分类</Breadcrumb-item>
+            </Breadcrumb>   
     <Cascader :data="data" v-model="value1" class="downtop"></Cascader>
       <input id="submit" value="下一步，填写商品信息" class="submit" style=" width: 200px;" type="submit" >
     </div>
@@ -204,3 +210,4 @@ import Cookies from 'js-cookie';
         }
     }
 </script>
+

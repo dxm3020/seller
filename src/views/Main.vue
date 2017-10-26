@@ -14,7 +14,7 @@
         <div class="main-header-con" :style="{paddingLeft: hideMenuText?'60px':'200px'}">
             <div class="main-header">
                 <div class="header-middle-con">
-                 <NavTop />
+                 <Menu />
                 </div>
                 <div class="header-avator-con">
                     <div @click="handleFullScreen" v-if="showFullScreenBtn" class="full-screen-btn-con">
@@ -74,6 +74,8 @@ import breadcrumbNav from "./main_components/breadcrumbNav.vue";
 import themeDropdownMenu from "./main_components/themeDropdownMenu.vue";
 import sidebarMenuShrink from "./main_components/sidebarMenuShrink.vue";
 import NavTop from "./Navigation/NavTop.vue";
+import Menu from "./Menu/Menu.vue";
+
 import Cookies from "js-cookie";
 import util from "../libs/util.js";
 
@@ -84,7 +86,8 @@ export default {
     breadcrumbNav,
     themeDropdownMenu,
     sidebarMenuShrink,
-    NavTop
+    NavTop,
+    Menu
   },
   data() {
     return {
