@@ -5,7 +5,7 @@
                           商品
                         </a>
                             <DropdownMenu slot="list">
-                            <DropdownItem @click="shoep()">商品发布</DropdownItem>
+                            <DropdownItem><router-link to="/mall/send">商品发布</router-link></DropdownItem>
                             <DropdownItem><router-link to="/mall/send"> 出售中的商品</router-link></DropdownItem>
                             <DropdownItem> 仓库中的商品</DropdownItem>
                             <DropdownItem> 库存日志</DropdownItem>
@@ -30,9 +30,7 @@
 <script>
 export default {
     methods:{
-        shoep:function(){
-             this.$router.push('/send')
-         }
+    
     }
 }
 </script>
