@@ -4,10 +4,10 @@
 <template>
     <div id="main" class="main" :class="{'main-hide-text': hideMenuText}">
         <div class="sidebar-menu-con" :style="{width: hideMenuText?'60px':'200px', overflow: hideMenuText ? 'visible' : 'auto', background: $store.state.menuTheme === 'dark'?'#495060':'white'}">
-            <div class="logo-con">
+            <!-- <div class="logo-con">
                 <img v-show="!hideMenuText"  src="../images/logo.jpg">
                 <img v-show="hideMenuText" src="../images/logo-min.jpg">
-            </div>
+            </div> -->
             <sidebar-menu v-if="!hideMenuText" :menuList="menuList" :iconSize="14"/>
             <sidebar-menu-shrink :icon-color="menuIconColor" v-else :menuList="menuList"/>
         </div>
@@ -73,7 +73,6 @@ import tagsPageOpened from "./main_components/tagsPageopened.vue";
 import breadcrumbNav from "./main_components/breadcrumbNav.vue";
 import themeDropdownMenu from "./main_components/themeDropdownMenu.vue";
 import sidebarMenuShrink from "./main_components/sidebarMenuShrink.vue";
-import NavTop from "./Navigation/NavTop.vue";
 import Menu from "./Menu/Menu.vue";
 
 import Cookies from "js-cookie";
@@ -86,7 +85,6 @@ export default {
     breadcrumbNav,
     themeDropdownMenu,
     sidebarMenuShrink,
-    NavTop,
     Menu
   },
   data() {

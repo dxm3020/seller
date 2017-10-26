@@ -1,3 +1,4 @@
+
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -79,7 +80,11 @@ module.exports = {
         extensions: ['.js', '.vue'],
         alias: {
             'vue': 'vue/dist/vue.esm.js',
-            '@': resolve('../src')
+            '@': resolve('../src'),
+            'jquery': path.resolve(__dirname, '../node_modules/jquery/src/jquery'),
+            'directives': path.resolve(__dirname, '../src/directives')
+        
         }
-    }
+    },
+    
 };
