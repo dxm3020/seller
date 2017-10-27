@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/crumbnav.css">
     <link rel="stylesheet" href="../css/seller_center.css">
@@ -84,13 +85,13 @@
             <div class="sidebar">
                 <div class="column-menu">
                     <ul id="seller_center_left_menu">
-                        <li class="current">
+                        <li class="">
                             <a href="index.html"> 商品发布</a>
                         </li>
                         <li class="">
                             <a href="goodsList.html"> 出售中的商品</a>
                         </li>
-                        <li class="">
+                        <li class="current">
                             <a href="goods_offline.html"> 仓库中的商品</a>
                         </li>
                         <li class="">
@@ -110,23 +111,76 @@
             <div class="ncsc-path">
                 <i class="icon-desktop"></i>商家管理中心
                 <i class="icon-angle-right"></i>商品
-                <i class="icon-angle-right"></i>选择商品分类</div>
+                <i class="icon-angle-right"></i>出售中的商品</div>
             <!--面包屑导航-->
             <!--商品分类-->
-            <div class="wareSort clearfix">
-                <ul id="sort1"></ul>
-                <ul id="sort2" style="display: none;"></ul>
-                <ul id="sort3" style="display: none;"></ul>
-            </div>
-            <div class="selectedSort">
-                <b>您当前选择的商品类别是：</b>
-                <i id="selectedSort"></i>
-            </div>
-            <div class="wareSortBtn">
-                <input id="releaseBtn" type="button" value="下一步" disabled="disabled" />
-            </div>
-
-        </div>
+            <div class="main-content" id="mainContent">
+                    
+                  <div class="tabmenu">
+                    <ul class="tab pngFix">
+                        <li class="active"><a href="goods_offline.html">仓库中的商品</a></li>
+                        <li class="normal"><a href="goods_offline1.html">违规的商品</a></li>
+                    </ul>
+                  </div>
+                  <form method="get" action="">
+                    <table class="search-form">
+                      <input type="hidden" name="act" value="goods_offline">
+                      <tbody><tr>
+                        <td>&nbsp;</td>
+                        <th>供货商</th>
+                        <td class="w160">
+                         <select name="suppliers_id" class="w150">
+                          <option value="0">请选择...</option>
+                                     </select>
+                        </td>
+                        <th>本店分类</th>
+                        <td class="w160">
+                            <select name="store_cat_id1" id="store_cat_id1" class="select">
+                                <option value="">本店分类</option>
+                                              </select>
+                        </td>
+                                  <th>审核状态</th>
+                        <td class="w90">
+                          <select name="goods_state">
+                                <option value="">请选择...</option>
+                              <option value="0">待审核</option>
+                              <option value="1">审核通过</option>
+                              <option value="2">未通过</option>
+                            </select>
+                        </td>
+                                  <td class="w160"><input type="text" class="text" name="key_word" value="" placeholder="搜索词"></td>
+                        <td class="tc w70"><label class="submit-border"><input type="submit" class="submit" value="搜索"></label></td>
+                      </tr>
+                    </tbody></table>
+                  </form>
+                        <table class="ncsc-default-table">
+                    <thead>
+                      <tr nc_type="table_header">
+                        <th class="w30">ID</th>
+                        <th class="w50"></th>
+                        <th>商品名称</th>
+                        <th class="w80">上架</th>
+                        <th class="w80">审核状态</th>
+                        <th class="w100">价格</th>
+                        <th class="w100">库存</th>
+                        <th class="w100">操作</th>
+                      </tr>
+                        <!--<tr>
+                        <td class="tc"><input type="checkbox" id="all" class="checkall"/></td>
+                        <td colspan="10"><label for="all">全选</label>
+                          <a href="javascript:void(0);" class="ncbtn-mini" nc_type="batchbutton" uri="" name="commonid" confirm="您确定要删除吗?"><i class="icon-trash"></i>删除</a>
+                        </tr>-->
+                        </thead>
+                          <tbody>
+                                          </tbody>
+                        <tfoot>
+                          <tr>
+                             <td colspan="20"></td>
+                          </tr>
+                        </tfoot>
+                    </table>
+                       </div>
+   </div>
     </div>
 
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>

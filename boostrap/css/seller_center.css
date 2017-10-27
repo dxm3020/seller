@@ -280,36 +280,36 @@ a:focus, a:active { text-decoration: none;}
 .store-closed dd { font: 12px/18px "microsoft yahei"; color: #555; height: 18px;}
 /* 布局 */
 .ncsc-layout { background: url(../images/seller/bg.png) repeat-y 196px 0; overflow: hidden;flex: 1 0 auto;}
-.ncsc-layout-left { width: 200px; float: left; position: relative; z-index: 2;}
+{ width: 200px; float: left; position: relative; z-index: 2;}
 .ncsc-layout-right { background-color: #FFF; width: 999px; min-height: 640px; float: right; position: relative; z-index: 1;}
 /* 内容其余左侧边栏 */
-.ncsc-layout-left .sidebar { width: 196px;}
+.sidebar { width: 196px;}
 .ncsc-layout-left.sticky .sidebar { position:fixed; _position: relative; top: 0; z-index:999;}
-.ncsc-layout-left .sidebar .column-title { background-color: #FFF; width: 96px; height: 96px; margin: 15px auto 25px auto; border: solid 1px #DDD; border-radius: 15px; box-shadow: 0 0 0 4px rgba(204,204,204,0.25);}
-.ncsc-layout-left .sidebar .column-title span { background: url(../images/seller/ncsc_bg_img.png) no-repeat; display: block; width: 64px; height: 64px; margin: 10px auto 0 auto; }
-.ncsc-layout-left .sidebar .column-title .ico-index { background-position:0 -30px;}
-.ncsc-layout-left .sidebar .column-title .ico-goods { background-position: -128px -30px;}
-.ncsc-layout-left .sidebar .column-title .ico-order { background-position: -128px -170px;}
-.ncsc-layout-left .sidebar .column-title .ico-promotion { background-position: -64px -100px;}
-.ncsc-layout-left .sidebar .column-title .ico-store { background-position: -64px -30px;}
-.ncsc-layout-left .sidebar .column-title .ico-message { background-position: 0 -100px;}
-.ncsc-layout-left .sidebar .column-title .ico-consult { background-position: -192px -30px;}
-.ncsc-layout-left .sidebar .column-title .ico-service { background-position: -128px -100px;}
-.ncsc-layout-left .sidebar .column-title .ico-statistics { background-position: -192px -100px;}
-.ncsc-layout-left .sidebar .column-title .ico-account { background-position: 0 -170px;}
-.ncsc-layout-left .sidebar .column-title .ico-live { background-position: -64px -170px;}
-.ncsc-layout-left .sidebar .column-title .ico-webchat { background-position: 0 -30px;}
-.ncsc-layout-left .sidebar .column-title h2 { font-size: 12px; line-height: 20px; font-weight: lighter; color: #999; text-align: center; height: 20px; margin: 0 auto;}
-.ncsc-layout-left .sidebar .column-menu { position: relative; z-index: 2;}
-.ncsc-layout-left .sidebar .column-menu ul { width: 180px; padding: 0 0 0 20px; position: absolute; z-index: 1; top: 0; right: -5px;}
-.ncsc-layout-left .sidebar .column-menu li { display: block; clear: both;}
-.ncsc-layout-left .sidebar .column-menu li a { font: 13px/24px "microsoft yahei"; color: #666; display: block; height: 28px; padding: 3px 0 2px 40px; margin: 1px 0 1px 4px;}
-.ncsc-layout-left .sidebar .column-menu li a:hover { color: #27A9E3; text-decoration: none;}
-.ncsc-layout-left .sidebar .column-menu li.current a { font-weight: 600; line-height: 28px; color: #3BAEDA; background-color: #FFF; padding: 6px 0 5px 40px; margin: 0; border-style: solid; border-color: #E6E9EE transparent #E6E9EE #3BAEDA; border-width: 1px 0 1px 2px;}
-.ncsc-layout-left .sidebar .add-quickmenu { padding-top: 15px; margin: 15px 20px 0 0; border-top: dashed 1px #DDD;}
-.ncsc-layout-left .sidebar .add-quickmenu a { font-size: 12px; line-height: 28px; color: #27A9E3; background-color: #FFF; text-align: center; display: block; height: 28px; border: solid 1px #27A9E3; box-shadow: 3px 3px 0 rgba(204,204,204,0.2);}
-.ncsc-layout-left .sidebar .add-quickmenu a i { margin-right: 4px;}
-.ncsc-layout-left .sidebar .add-quickmenu a:hover { text-decoration: none; color: #FFF; background-color: #27A9E3;}
+.sidebar .column-title { background-color: #FFF; width: 96px; height: 96px; margin: 15px auto 25px auto; border: solid 1px #DDD; border-radius: 15px; box-shadow: 0 0 0 4px rgba(204,204,204,0.25);}
+.sidebar .column-title span { background: url(../images/seller/ncsc_bg_img.png) no-repeat; display: block; width: 64px; height: 64px; margin: 10px auto 0 auto; }
+.sidebar .column-title .ico-index { background-position:0 -30px;}
+.sidebar .column-title .ico-goods { background-position: -128px -30px;}
+.sidebar .column-title .ico-order { background-position: -128px -170px;}
+.sidebar .column-title .ico-promotion { background-position: -64px -100px;}
+.sidebar .column-title .ico-store { background-position: -64px -30px;}
+.sidebar .column-title .ico-message { background-position: 0 -100px;}
+.sidebar .column-title .ico-consult { background-position: -192px -30px;}
+.sidebar .column-title .ico-service { background-position: -128px -100px;}
+.sidebar .column-title .ico-statistics { background-position: -192px -100px;}
+.sidebar .column-title .ico-account { background-position: 0 -170px;}
+.sidebar .column-title .ico-live { background-position: -64px -170px;}
+.sidebar .column-title .ico-webchat { background-position: 0 -30px;}
+.sidebar .column-title h2 { font-size: 12px; line-height: 20px; font-weight: lighter; color: #999; text-align: center; height: 20px; margin: 0 auto;}
+.sidebar .column-menu { position: relative; z-index: 2;}
+.sidebar .column-menu ul { width: 180px; padding: 0 0 0 20px; position: absolute; z-index: 1; top: 0; right: -5px;}
+.sidebar .column-menu li { display: block; clear: both;}
+.sidebar .column-menu li a { font: 13px/24px "microsoft yahei"; color: #666; display: block; height: 28px; padding: 3px 0 2px 40px; margin: 1px 0 1px 4px;}
+.sidebar .column-menu li a:hover { color: #27A9E3; text-decoration: none;}
+.sidebar .column-menu li.current a { font-weight: 600; line-height: 28px; color: #3BAEDA; background-color: #FFF; padding: 6px 0 5px 40px; margin: 0; border-style: solid; border-color: #E6E9EE transparent #E6E9EE #3BAEDA; border-width: 1px 0 1px 2px;}
+.sidebar .add-quickmenu { padding-top: 15px; margin: 15px 20px 0 0; border-top: dashed 1px #DDD;}
+.sidebar .add-quickmenu a { font-size: 12px; line-height: 28px; color: #27A9E3; background-color: #FFF; text-align: center; display: block; height: 28px; border: solid 1px #27A9E3; box-shadow: 3px 3px 0 rgba(204,204,204,0.2);}
+.sidebar .add-quickmenu a i { margin-right: 4px;}
+.sidebar .add-quickmenu a:hover { text-decoration: none; color: #FFF; background-color: #27A9E3;}
 /* 内容区域右侧当前位置 */
 .ncsc-path { font-size: 12px; line-height: 20px;  background-color: #FFF; line-height: 20px; color: #555; padding: 10px; border-bottom: solid 1px #F5F5F5;}
 .ncsc-path i { font-size: 12px; color: #999; margin: 0 6px;}
@@ -426,7 +426,7 @@ a:focus, a:active { text-decoration: none;}
 .tabmenu .tab .ui-tabs-selected a { height:36px; color: #FFFFFF; background-color: #FFF; display: inline-block; padding: 0px 10px; border:0px; border-radius: 4px 4px 0 0; cursor: default; background-color: #27A9E3;}
 .tabmenu .tab .ui-tabs-selected a:hover { text-decoration: none; cursor: default;}
 .tabmenu .text-intro { line-height: 20px; color: #999; position: absolute; z-index: 99; top:5px; right:5px;}
-.tabmenu a.ncbtn { position: absolute; z-index: 1; top: -2px; right: 0px;}
+.tabmenu a.ncbtn { position: absolute; z-index: 1; top: -2px; right: 0px;height:30px;}
 .sticky .tabmenu { width: 960px; padding-top: 10px; padding-bottom: 10px; position: fixed; top: 0; }
 .sticky .tabmenu a.ncbtn { top: 8px;}
 
@@ -480,7 +480,7 @@ a:focus, a:active { text-decoration: none;}
 
 /* 内容部分通用搜索样式 */
 .search-form { color: #999; width: 100%; border-bottom: solid 1px #E6E6E6;}
-.search-form th { font-size: 12px; line-height: 22px; text-align: right; width: 50px; padding: 8px 8px 8px 0;}
+.search-form th { font-size: 12px; line-height: 22px; text-align: right; width: 60px; padding: 8px 8px 8px 0;}
 .search-form td { text-align: left; padding: 8px 0;}
 .search-form input.text { vertical-align: middle; width: 148px;}
 .search-form .add-on { vertical-align: top;}

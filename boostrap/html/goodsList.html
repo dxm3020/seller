@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/crumbnav.css">
+    <link rel="stylesheet" href="../css/seller_center.css">
+    <link href="https://cdn.bootcss.com/font-awesome/3.0.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-blue">
+        <div class="container">
+            <img src="http://demo6.tp-shop.cn/public/static/images/seller/seller_center_logo.png" alt="" class="pull-left">
+            <div class="bred pull-left">
+                <div id='cssmenu'>
+                    <ul>
+                        <li>
+                            <a href='#'>首页</a>
+                        </li>
+                        <li class='active has-sub'>
+                            <a href='#'>商品</a>
+                            <ul>
+                                <li class='has-sub'>
+                                    <a href='#'>商品发布</a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 仓库中的商品 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 库存日志 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 商品规格 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 品牌申请 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href='#'>订单物流</a>
+                            <ul>
+                                <li class='has-sub'>
+                                    <a href='#'> 订单列表 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 虚拟订单 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'>拼团订单 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'>发货商品 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 品牌申请 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href='#'>促销</a>
+                        </li>
+                        <li>
+                            <a href='#'>店铺</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-left">
+            <div class="column-title" id="main-nav">
+                <span class="ico-goods"></span>
+                <h2>商品</h2>
+            </div>
+            <div class="sidebar">
+                <div class="column-menu">
+                    <ul id="seller_center_left_menu">
+                        <li class="">
+                            <a href="index.html"> 商品发布</a>
+                        </li>
+                        <li class="current">
+                            <a href="goodsList.html"> 出售中的商品</a>
+                        </li>
+                        <li class="">
+                            <a href="goods_offline.html"> 仓库中的商品</a>
+                        </li>
+                        <li class="">
+                            <a href="stock_list.html"> 库存日志</a>
+                        </li>
+                        <li class="">
+                            <a href="specList.html"> 商品规格</a>
+                        </li>
+                        <li class="">
+                            <a href="brandList.html"> 品牌申请</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="ncsc-path">
+                <i class="icon-desktop"></i>商家管理中心
+                <i class="icon-angle-right"></i>商品
+                <i class="icon-angle-right"></i>出售中的商品</div>
+            <!--面包屑导航-->
+            <!--商品分类-->
+            <div class="main-content" id="mainContent">
+                    
+                                <div class="tabmenu">
+                                    <ul class="tab pngFix">
+                                        <li class="active"><a href="/index.php/seller/Goods/goodsList/goods_state/1">出售中的商品</a></li>
+                                    </ul>
+                                    <a href="/index.php/Seller/goods/addStepOne" style="    height: 30px;" class="ncbtn ncbtn-mint" title="发布新商品"> 发布新商品</a>
+                                </div>
+                                <div class="alert alert-block mt10">
+                                    <ul class="mt5">
+                                        <li>1、商品下架以后，重新上架之前需要平台审核.</li>
+                                    </ul>
+                                </div>
+                                <form action="" id="search-form2" method="post" onsubmit="return false">
+                                    <table class="search-form">
+                                        <input type="hidden" name="orderby1" value="goods_id">
+                                        <input type="hidden" name="orderby2" value="desc">
+                                        <tbody><tr>
+                                            <td>&nbsp;</td>
+                                            <th>本店分类</th>
+                                            <td class="w80">
+                                                <select name="store_cat_id1" id="store_cat_id1" class="select">
+                                                    <option value="">本店分类</option>
+                                                                                </select>
+                                            </td>
+                                            <th>供应商</th>
+                                            <td class="w80">
+                                               <select name="suppliers_id" class="w150">
+                                                <option value="">请选择...</option>
+                                                                           </select>
+                                            </td>
+                                            <th class="w60">新品/推荐</th>
+                                            <td class="w80">
+                                                <select name="intro" class="select">
+                                                    <option value="0">全部</option>
+                                                    <option value="is_hot">热卖</option>
+                                                    <option value="is_new">新品</option>
+                                                    <option value="is_recommend">推荐</option>
+                                                </select>
+                                            </td>
+                                            <td class="w160"><input type="text" class="text w150" name="key_word" value="" placeholder="搜索词"></td>
+                                            <td class="tc w70"><label class="submit-border">
+                                                <input type="submit" class="submit" value="搜索" onclick="ajax_get_table('search-form2',1)">
+                                            </label></td>
+                                        </tr>
+                                    </tbody></table>
+                                </form>
+                                <div id="ajax_return"><table class="ncsc-default-table" data-goods-examine="0">
+                        <thead>
+                        <tr nc_type="table_header">
+                            <th class="w30"><a href="javascript:sort('goods_id');">ID</a></th>
+                            <th class="w50">&nbsp;</th>
+                            <th class="w250">商品名称</th>
+                            <th class="w150"><a href="javascript:sort('cat_id1');">分类</a></th>
+                            <th class="w80"><a href="javascript:sort('shop_price');">价格</a></th>
+                            <th class="w30"><a>上架</a></th>
+                            <th class="w30"><a href="javascript:sort('store_count');">库存</a></th>
+                            <th class="w80"><a href="javascript:sort('on_time');">上架时间</a></th>
+                            <th class="w30"><a href="javascript:sort('sort');">排序</a></th>
+                            <th class="w120">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                                <tr class="bd-line" data-goods-id="79">
+                                <td>79</td>
+                                <td>
+                                    <div class="pic-thumb">
+                                        <a href="/index.php/Home/Goods/goodsInfo/id/79" target="_blank">
+                                            <img style="width:32px;height:32px" src="/public/upload/goods/thumb/79/goods_thumb_79_50_50.jpeg">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <dl class="goods-name">
+                                        <dt style="max-width: 450px !important;">
+                                                                <a href="/index.php/Home/Goods/goodsInfo/id/79" target="_blank">恒源祥秋冬新款男士纯色全羊毛衫 中年圆领长袖毛衣 加厚针织衫潮08...</a></dt>
+                                        <dd>商品货号：TP0000079</dd>
+                                        <dd class="serve">
+                                                                        <span class="open" title="平台推荐商品"><i class="commend">荐</i></span>
+                                                                    <a href="/index.php/Mobile/Goods/goodsInfo/id/79"><span title="手机端商品详情"><i class="icon-tablet"></i></span></a>
+                                            <a onclick="ClearGoodsHtml('79')" title="清除静态缓存页面"><span title="清除静态缓存页面"><i class="icon-wrench"></i></span></a>
+                                            <a onclick="ClearGoodsThumb('79')" title="清除缩略图缓存"><span title="清除缩略图缓存"><i class="icon-picture"></i></span></a>
+                                        </dd>
+                                    </dl>
+                                </td>
+                                <td><span>男装、女装、童装、内衣</span></td>
+                                <td><span>¥398.00</span></td>
+                                <td><img width="20" height="20" src="/public/images/yes.png" class="is_on_sale"></td>
+                                <td><span style="">99</span></td>
+                                <td>2016-10-27 11:04</td>
+                                <td>
+                                    <input class="txt-cen" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onchange="updateSort2('goods','goods_id','79','sort',this)" size="4" value="50">
+                                </td>
+                                <td class="nscs-table-handle">
+                                    <span><a href="/index.php/seller/Goods/addEditGoods/goods_id/79" class="btn-bluejeans"><i class="icon-edit"></i><p>编辑</p></a></span>
+                                    <span><a href="javascript:void(0);" onclick="del('79')" class="btn-grapefruit"><i class="icon-trash"></i><p>删除</p></a></span>
+                                </td>
+                            </tr>
+                                <tr class="bd-line" data-goods-id="50">
+                                <td>50</td>
+                                <td>
+                                    <div class="pic-thumb">
+                                        <a href="/index.php/Home/Goods/goodsInfo/id/50" target="_blank">
+                                            <img style="width:32px;height:32px" src="/public/upload/goods/thumb/50/goods_thumb_50_50_50.jpeg">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <dl class="goods-name">
+                                        <dt style="max-width: 450px !important;">
+                                                                <a href="/index.php/Home/Goods/goodsInfo/id/50" target="_blank">华为 HUAWEI 畅享5S 全网通 2GB RAM+16GB R...</a></dt>
+                                        <dd>商品货号：TP0000050</dd>
+                                        <dd class="serve">
+                                                                    <a href="/index.php/Mobile/Goods/goodsInfo/id/50"><span title="手机端商品详情"><i class="icon-tablet"></i></span></a>
+                                            <a onclick="ClearGoodsHtml('50')" title="清除静态缓存页面"><span title="清除静态缓存页面"><i class="icon-wrench"></i></span></a>
+                                            <a onclick="ClearGoodsThumb('50')" title="清除缩略图缓存"><span title="清除缩略图缓存"><i class="icon-picture"></i></span></a>
+                                        </dd>
+                                    </dl>
+                                </td>
+                                <td><span>手机 、 数码 、 通信</span></td>
+                                <td><span>¥1199.00</span></td>
+                                <td><img width="20" height="20" src="/public/images/yes.png" class="is_on_sale"></td>
+                                <td><span style="">291</span></td>
+                                <td>2017-08-30 15:48</td>
+                                <td>
+                                    <input class="txt-cen" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onchange="updateSort2('goods','goods_id','50','sort',this)" size="4" value="50">
+                                </td>
+                                <td class="nscs-table-handle">
+                                    <span><a href="/index.php/seller/Goods/addEditGoods/goods_id/50" class="btn-bluejeans"><i class="icon-edit"></i><p>编辑</p></a></span>
+                                    <span><a href="javascript:void(0);" onclick="del('50')" class="btn-grapefruit"><i class="icon-trash"></i><p>删除</p></a></span>
+                                </td>
+                            </tr>
+                                <tr class="bd-line" data-goods-id="49">
+                                <td>49</td>
+                                <td>
+                                    <div class="pic-thumb">
+                                        <a href="/index.php/Home/Goods/goodsInfo/id/49" target="_blank">
+                                            <img style="width:32px;height:32px" src="/public/upload/goods/thumb/49/goods_thumb_49_50_50.jpeg">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <dl class="goods-name">
+                                        <dt style="max-width: 450px !important;">
+                                                                <a href="/index.php/Home/Goods/goodsInfo/id/49" target="_blank">荣耀畅玩5X 双卡双待 移动版 智能手机（破晓银）</a></dt>
+                                        <dd>商品货号：TP0000049</dd>
+                                        <dd class="serve">
+                                                                    <a href="/index.php/Mobile/Goods/goodsInfo/id/49"><span title="手机端商品详情"><i class="icon-tablet"></i></span></a>
+                                            <a onclick="ClearGoodsHtml('49')" title="清除静态缓存页面"><span title="清除静态缓存页面"><i class="icon-wrench"></i></span></a>
+                                            <a onclick="ClearGoodsThumb('49')" title="清除缩略图缓存"><span title="清除缩略图缓存"><i class="icon-picture"></i></span></a>
+                                        </dd>
+                                    </dl>
+                                </td>
+                                <td><span>手机 、 数码 、 通信</span></td>
+                                <td><span>¥999.00</span></td>
+                                <td><img width="20" height="20" src="/public/images/yes.png" class="is_on_sale"></td>
+                                <td><span style="">97</span></td>
+                                <td>2017-08-30 15:48</td>
+                                <td>
+                                    <input class="txt-cen" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onchange="updateSort2('goods','goods_id','49','sort',this)" size="4" value="50">
+                                </td>
+                                <td class="nscs-table-handle">
+                                    <span><a href="/index.php/seller/Goods/addEditGoods/goods_id/49" class="btn-bluejeans"><i class="icon-edit"></i><p>编辑</p></a></span>
+                                    <span><a href="javascript:void(0);" onclick="del('49')" class="btn-grapefruit"><i class="icon-trash"></i><p>删除</p></a></span>
+                                </td>
+                            </tr>
+                                <tr class="bd-line" data-goods-id="48">
+                                <td>48</td>
+                                <td>
+                                    <div class="pic-thumb">
+                                        <a href="/index.php/Home/Goods/goodsInfo/id/48" target="_blank">
+                                            <img style="width:32px;height:32px" src="/public/upload/goods/thumb/48/goods_thumb_48_50_50.jpeg">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <dl class="goods-name">
+                                        <dt style="max-width: 450px !important;">
+                                                                <a href="/index.php/Home/Goods/goodsInfo/id/48" target="_blank">荣耀7 双卡双待双通 移动4G版 16GB存储（冰河银）豪华套装一</a></dt>
+                                        <dd>商品货号：TP0000048</dd>
+                                        <dd class="serve">
+                                                                        <span class="open" title="平台推荐商品"><i class="commend">荐</i></span>
+                                                                    <a href="/index.php/Mobile/Goods/goodsInfo/id/48"><span title="手机端商品详情"><i class="icon-tablet"></i></span></a>
+                                            <a onclick="ClearGoodsHtml('48')" title="清除静态缓存页面"><span title="清除静态缓存页面"><i class="icon-wrench"></i></span></a>
+                                            <a onclick="ClearGoodsThumb('48')" title="清除缩略图缓存"><span title="清除缩略图缓存"><i class="icon-picture"></i></span></a>
+                                        </dd>
+                                    </dl>
+                                </td>
+                                <td><span>手机 、 数码 、 通信</span></td>
+                                <td><span>¥2099.00</span></td>
+                                <td><img width="20" height="20" src="/public/images/yes.png" class="is_on_sale"></td>
+                                <td><span style="">99</span></td>
+                                <td>2017-08-30 15:48</td>
+                                <td>
+                                    <input class="txt-cen" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onchange="updateSort2('goods','goods_id','48','sort',this)" size="4" value="50">
+                                </td>
+                                <td class="nscs-table-handle">
+                                    <span><a href="/index.php/seller/Goods/addEditGoods/goods_id/48" class="btn-bluejeans"><i class="icon-edit"></i><p>编辑</p></a></span>
+                                    <span><a href="javascript:void(0);" onclick="del('48')" class="btn-grapefruit"><i class="icon-trash"></i><p>删除</p></a></span>
+                                </td>
+                            </tr>
+                                <tr class="bd-line" data-goods-id="47">
+                                <td>47</td>
+                                <td>
+                                    <div class="pic-thumb">
+                                        <a href="/index.php/Home/Goods/goodsInfo/id/47" target="_blank">
+                                            <img style="width:32px;height:32px" src="/public/upload/goods/thumb/47/goods_thumb_47_50_50.jpeg">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <dl class="goods-name">
+                                        <dt style="max-width: 450px !important;">
+                                                                <a href="/index.php/Home/Goods/goodsInfo/id/47" target="_blank">【联通合约机 50元本地套餐】荣耀畅玩5X 双卡双待 增强全网通版...</a></dt>
+                                        <dd>商品货号：TP0000047</dd>
+                                        <dd class="serve">
+                                                                    <a href="/index.php/Mobile/Goods/goodsInfo/id/47"><span title="手机端商品详情"><i class="icon-tablet"></i></span></a>
+                                            <a onclick="ClearGoodsHtml('47')" title="清除静态缓存页面"><span title="清除静态缓存页面"><i class="icon-wrench"></i></span></a>
+                                            <a onclick="ClearGoodsThumb('47')" title="清除缩略图缓存"><span title="清除缩略图缓存"><i class="icon-picture"></i></span></a>
+                                        </dd>
+                                    </dl>
+                                </td>
+                                <td><span>手机 、 数码 、 通信</span></td>
+                                <td><span>¥1399.00</span></td>
+                                <td><img width="20" height="20" src="/public/images/yes.png" class="is_on_sale"></td>
+                                <td><span style="">99</span></td>
+                                <td>2016-10-31 18:07</td>
+                                <td>
+                                    <input class="txt-cen" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onchange="updateSort2('goods','goods_id','47','sort',this)" size="4" value="50">
+                                </td>
+                                <td class="nscs-table-handle">
+                                    <span><a href="/index.php/seller/Goods/addEditGoods/goods_id/47" class="btn-bluejeans"><i class="icon-edit"></i><p>编辑</p></a></span>
+                                    <span><a href="javascript:void(0);" onclick="del('47')" class="btn-grapefruit"><i class="icon-trash"></i><p>删除</p></a></span>
+                                </td>
+                            </tr>
+                                <tr class="bd-line" data-goods-id="46">
+                                <td>46</td>
+                                <td>
+                                    <div class="pic-thumb">
+                                        <a href="/index.php/Home/Goods/goodsInfo/id/46" target="_blank">
+                                            <img style="width:32px;height:32px" src="/public/upload/goods/thumb/46/goods_thumb_46_50_50.jpeg">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <dl class="goods-name">
+                                        <dt style="max-width: 450px !important;">
+                                                                <a href="/index.php/Home/Goods/goodsInfo/id/46" target="_blank">【北京移动老用户专享 话费六折】荣耀畅玩5X 双卡双待 移动版 智...</a></dt>
+                                        <dd>商品货号：TP0000046</dd>
+                                        <dd class="serve">
+                                                                    <a href="/index.php/Mobile/Goods/goodsInfo/id/46"><span title="手机端商品详情"><i class="icon-tablet"></i></span></a>
+                                            <a onclick="ClearGoodsHtml('46')" title="清除静态缓存页面"><span title="清除静态缓存页面"><i class="icon-wrench"></i></span></a>
+                                            <a onclick="ClearGoodsThumb('46')" title="清除缩略图缓存"><span title="清除缩略图缓存"><i class="icon-picture"></i></span></a>
+                                        </dd>
+                                    </dl>
+                                </td>
+                                <td><span>手机 、 数码 、 通信</span></td>
+                                <td><span>¥999.00</span></td>
+                                <td><img width="20" height="20" src="/public/images/yes.png" class="is_on_sale"></td>
+                                <td><span style="">100</span></td>
+                                <td>1970-01-01 08:00</td>
+                                <td>
+                                    <input class="txt-cen" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onchange="updateSort2('goods','goods_id','46','sort',this)" size="4" value="50">
+                                </td>
+                                <td class="nscs-table-handle">
+                                    <span><a href="/index.php/seller/Goods/addEditGoods/goods_id/46" class="btn-bluejeans"><i class="icon-edit"></i><p>编辑</p></a></span>
+                                    <span><a href="javascript:void(0);" onclick="del('46')" class="btn-grapefruit"><i class="icon-trash"></i><p>删除</p></a></span>
+                                </td>
+                            </tr>
+                                <tr class="bd-line" data-goods-id="45">
+                                <td>45</td>
+                                <td>
+                                    <div class="pic-thumb">
+                                        <a href="/index.php/Home/Goods/goodsInfo/id/45" target="_blank">
+                                            <img style="width:32px;height:32px" src="/public/upload/goods/thumb/45/goods_thumb_45_50_50.jpeg">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <dl class="goods-name">
+                                        <dt style="max-width: 450px !important;">
+                                                                <a href="/index.php/Home/Goods/goodsInfo/id/45" target="_blank">华为 HUAWEI C199S 麦芒3S 电信4G智能手机FDD-...</a></dt>
+                                        <dd>商品货号：TP0000045</dd>
+                                        <dd class="serve">
+                                                                    <a href="/index.php/Mobile/Goods/goodsInfo/id/45"><span title="手机端商品详情"><i class="icon-tablet"></i></span></a>
+                                            <a onclick="ClearGoodsHtml('45')" title="清除静态缓存页面"><span title="清除静态缓存页面"><i class="icon-wrench"></i></span></a>
+                                            <a onclick="ClearGoodsThumb('45')" title="清除缩略图缓存"><span title="清除缩略图缓存"><i class="icon-picture"></i></span></a>
+                                        </dd>
+                                    </dl>
+                                </td>
+                                <td><span>手机 、 数码 、 通信</span></td>
+                                <td><span>¥1999.00</span></td>
+                                <td><img width="20" height="20" src="/public/images/yes.png" class="is_on_sale"></td>
+                                <td><span style="">294</span></td>
+                                <td>2016-10-31 19:07</td>
+                                <td>
+                                    <input class="txt-cen" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onchange="updateSort2('goods','goods_id','45','sort',this)" size="4" value="50">
+                                </td>
+                                <td class="nscs-table-handle">
+                                    <span><a href="/index.php/seller/Goods/addEditGoods/goods_id/45" class="btn-bluejeans"><i class="icon-edit"></i><p>编辑</p></a></span>
+                                    <span><a href="javascript:void(0);" onclick="del('45')" class="btn-grapefruit"><i class="icon-trash"></i><p>删除</p></a></span>
+                                </td>
+                            </tr>
+                                <tr class="bd-line" data-goods-id="44">
+                                <td>44</td>
+                                <td>
+                                    <div class="pic-thumb">
+                                        <a href="/index.php/Home/Goods/goodsInfo/id/44" target="_blank">
+                                            <img style="width:32px;height:32px" src="/public/upload/goods/thumb/44/goods_thumb_44_50_50.jpeg">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <dl class="goods-name">
+                                        <dt style="max-width: 450px !important;">
+                                                                <a href="/index.php/Home/Goods/goodsInfo/id/44" target="_blank">荣耀平板 8.0英寸平板电脑（Wi-Fi版 四核1.2GHz处理器...</a></dt>
+                                        <dd>商品货号：TP0000044</dd>
+                                        <dd class="serve">
+                                                                    <a href="/index.php/Mobile/Goods/goodsInfo/id/44"><span title="手机端商品详情"><i class="icon-tablet"></i></span></a>
+                                            <a onclick="ClearGoodsHtml('44')" title="清除静态缓存页面"><span title="清除静态缓存页面"><i class="icon-wrench"></i></span></a>
+                                            <a onclick="ClearGoodsThumb('44')" title="清除缩略图缓存"><span title="清除缩略图缓存"><i class="icon-picture"></i></span></a>
+                                        </dd>
+                                    </dl>
+                                </td>
+                                <td><span>电脑、办公</span></td>
+                                <td><span>¥799.00</span></td>
+                                <td><img width="20" height="20" src="/public/images/yes.png" class="is_on_sale"></td>
+                                <td><span style="">100</span></td>
+                                <td>2016-10-31 19:10</td>
+                                <td>
+                                    <input class="txt-cen" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onchange="updateSort2('goods','goods_id','44','sort',this)" size="4" value="50">
+                                </td>
+                                <td class="nscs-table-handle">
+                                    <span><a href="/index.php/seller/Goods/addEditGoods/goods_id/44" class="btn-bluejeans"><i class="icon-edit"></i><p>编辑</p></a></span>
+                                    <span><a href="javascript:void(0);" onclick="del('44')" class="btn-grapefruit"><i class="icon-trash"></i><p>删除</p></a></span>
+                                </td>
+                            </tr>
+                                <tr class="bd-line" data-goods-id="43">
+                                <td>43</td>
+                                <td>
+                                    <div class="pic-thumb">
+                                        <a href="/index.php/Home/Goods/goodsInfo/id/43" target="_blank">
+                                            <img style="width:32px;height:32px" src="/public/upload/goods/thumb/43/goods_thumb_43_50_50.jpeg">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <dl class="goods-name">
+                                        <dt style="max-width: 450px !important;">
+                                                                <a href="/index.php/Home/Goods/goodsInfo/id/43" target="_blank">荣耀畅玩平板note 9.6英寸平板电脑 移动/联通双4G LTE...</a></dt>
+                                        <dd>商品货号：TP0000043</dd>
+                                        <dd class="serve">
+                                                                    <a href="/index.php/Mobile/Goods/goodsInfo/id/43"><span title="手机端商品详情"><i class="icon-tablet"></i></span></a>
+                                            <a onclick="ClearGoodsHtml('43')" title="清除静态缓存页面"><span title="清除静态缓存页面"><i class="icon-wrench"></i></span></a>
+                                            <a onclick="ClearGoodsThumb('43')" title="清除缩略图缓存"><span title="清除缩略图缓存"><i class="icon-picture"></i></span></a>
+                                        </dd>
+                                    </dl>
+                                </td>
+                                <td><span>电脑、办公</span></td>
+                                <td><span>¥500.00</span></td>
+                                <td><img width="20" height="20" src="/public/images/yes.png" class="is_on_sale"></td>
+                                <td><span style="">100</span></td>
+                                <td>2016-10-31 18:09</td>
+                                <td>
+                                    <input class="txt-cen" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onchange="updateSort2('goods','goods_id','43','sort',this)" size="4" value="50">
+                                </td>
+                                <td class="nscs-table-handle">
+                                    <span><a href="/index.php/seller/Goods/addEditGoods/goods_id/43" class="btn-bluejeans"><i class="icon-edit"></i><p>编辑</p></a></span>
+                                    <span><a href="javascript:void(0);" onclick="del('43')" class="btn-grapefruit"><i class="icon-trash"></i><p>删除</p></a></span>
+                                </td>
+                            </tr>
+                                <tr class="bd-line" data-goods-id="42">
+                                <td>42</td>
+                                <td>
+                                    <div class="pic-thumb">
+                                        <a href="/index.php/Home/Goods/goodsInfo/id/42" target="_blank">
+                                            <img style="width:32px;height:32px" src="/public/upload/goods/thumb/42/goods_thumb_42_50_50.png">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="tl">
+                                    <dl class="goods-name">
+                                        <dt style="max-width: 450px !important;">
+                                                                <a href="/index.php/Home/Goods/goodsInfo/id/42" target="_blank">Teclast/台电 X80 Plus WIFI 32GB Win...</a></dt>
+                                        <dd>商品货号：TP0000042</dd>
+                                        <dd class="serve">
+                                                                    <a href="/index.php/Mobile/Goods/goodsInfo/id/42"><span title="手机端商品详情"><i class="icon-tablet"></i></span></a>
+                                            <a onclick="ClearGoodsHtml('42')" title="清除静态缓存页面"><span title="清除静态缓存页面"><i class="icon-wrench"></i></span></a>
+                                            <a onclick="ClearGoodsThumb('42')" title="清除缩略图缓存"><span title="清除缩略图缓存"><i class="icon-picture"></i></span></a>
+                                        </dd>
+                                    </dl>
+                                </td>
+                                <td><span>电脑、办公</span></td>
+                                <td><span>¥169.00</span></td>
+                                <td><img width="20" height="20" src="/public/images/yes.png" class="is_on_sale"></td>
+                                <td><span style="">101</span></td>
+                                <td>2017-08-30 15:47</td>
+                                <td>
+                                    <input class="txt-cen" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onchange="updateSort2('goods','goods_id','42','sort',this)" size="4" value="50">
+                                </td>
+                                <td class="nscs-table-handle">
+                                    <span><a href="/index.php/seller/Goods/addEditGoods/goods_id/42" class="btn-bluejeans"><i class="icon-edit"></i><p>编辑</p></a></span>
+                                    <span><a href="javascript:void(0);" onclick="del('42')" class="btn-grapefruit"><i class="icon-trash"></i><p>删除</p></a></span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="20">
+                                <div class="dataTables_paginate paging_simple_numbers"><ul class="pagination">  <li class="paginate_button active"><a tabindex="0" data-dt-idx="1" aria-controls="example1" data-p="1" href="javascript:void(0)">1</a></li><li class="paginate_button"><a class="num" data-p="2" href="javascript:void(0)">2</a></li> <li id="example1_next" class="paginate_button next"><a class="next" data-p="2" href="javascript:void(0)">下一页</a></li> </ul></div>        </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                    </div>
+                                <script>
+                                    $(document).ready(function(){
+                                        // ajax 加载商品列表
+                                        ajax_get_table('search-form2', 1);
+                    
+                                    });
+                    
+                                    // ajax 抓取页面 form 为表单id  page 为当前第几页
+                                    function ajax_get_table(form, page) {
+                                        cur_page = page; //当前页面 保存为全局变量
+                                        $.ajax({
+                                            type: "POST",
+                                            url: "/index.php?m=Seller&c=goods&a=ajaxGoodsList&p=" + page,//+tab,
+                                            data: $('#' + form).serialize(),// 你的formid
+                                            success: function (data) {
+                                                $("#ajax_return").html('').append(data);
+                                            }
+                                        });
+                                    }
+                                    // 点击排序
+                                    function sort(field) {
+                                        $("input[name='orderby1']").val(field);
+                                        var v = $("input[name='orderby2']").val() == 'desc' ? 'asc' : 'desc';
+                                        $("input[name='orderby2']").val(v);
+                                        ajax_get_table('search-form2', cur_page);
+                                    }
+                    
+                                    // 删除操作
+                                    function del(id) {
+                                        layer.confirm('确定要删除吗？', {
+                                                    btn: ['确定','取消'] //按钮
+                                                }, function(){
+                                                    // 确定
+                                                    $.ajax({
+                                                        url: "/index.php?m=Seller&c=goods&a=delGoods&id=" + id,
+                                                        success: function (v) {
+                                                            layer.closeAll();
+                                                            var v = eval('(' + v + ')');
+                                                            if (v.hasOwnProperty('status') && (v.status == 1))
+                                                                ajax_get_table('search-form2', cur_page);
+                                                            else
+                                                                layer.msg(v.msg, {icon: 2, time: 1000}); //alert(v.msg);
+                                                        }
+                                                    });
+                                                }, function(index){
+                                                    layer.close(index);
+                                                }
+                                        );
+                                    }
+                                    //上下架
+                                    $(function () {
+                                        $(document).on('click', '.is_on_sale', function () {
+                                            var goods_examine = $('.ncsc-default-table').data('goods-examine');//商品是否需要审核
+                                            var goods_id = $(this).parents('tr').data('goods-id');
+                                            if (goods_examine == 1) {
+                                                //需要审核就更改商品状态
+                                                changeTableVal2('goods', 'goods_id', goods_id, 'goods_state', this);
+                                            }
+                                            changeTableVal2('goods', 'goods_id', goods_id, 'is_on_sale', this);
+                                            $(this).parent().parent().remove();
+                                        });
+                                    })
+                                </script>
+                            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://www.jq22.com/demo/jQueryNav201701142234/js/jquery-latest.min.js"></script>
+    <script src="http://www.jq22.com/demo/jQueryNav201701142234/js/jq22.js"></script>
+    <script src="../js/jquery.sort.js"></script>
+    <script>
+        $("#releaseBtn").on("click", function () {
+            location.href = "addEditGoods.html"; //跳转
+        })
+    </script>
+</body>
+
+</html>

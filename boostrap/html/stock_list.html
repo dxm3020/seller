@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/crumbnav.css">
     <link rel="stylesheet" href="../css/seller_center.css">
@@ -84,7 +85,7 @@
             <div class="sidebar">
                 <div class="column-menu">
                     <ul id="seller_center_left_menu">
-                        <li class="current">
+                        <li class="">
                             <a href="index.html"> 商品发布</a>
                         </li>
                         <li class="">
@@ -93,7 +94,7 @@
                         <li class="">
                             <a href="goods_offline.html"> 仓库中的商品</a>
                         </li>
-                        <li class="">
+                        <li class="current">
                             <a href="stock_list.html"> 库存日志</a>
                         </li>
                         <li class="">
@@ -110,22 +111,77 @@
             <div class="ncsc-path">
                 <i class="icon-desktop"></i>商家管理中心
                 <i class="icon-angle-right"></i>商品
-                <i class="icon-angle-right"></i>选择商品分类</div>
+                <i class="icon-angle-right"></i>出售中的商品</div>
             <!--面包屑导航-->
             <!--商品分类-->
-            <div class="wareSort clearfix">
-                <ul id="sort1"></ul>
-                <ul id="sort2" style="display: none;"></ul>
-                <ul id="sort3" style="display: none;"></ul>
-            </div>
-            <div class="selectedSort">
-                <b>您当前选择的商品类别是：</b>
-                <i id="selectedSort"></i>
-            </div>
-            <div class="wareSortBtn">
-                <input id="releaseBtn" type="button" value="下一步" disabled="disabled" />
-            </div>
-
+            <div class="main-content" id="mainContent">
+                    <div class="tabmenu">
+                        <ul class="tab pngFix">
+                            <li class="active"><a href="/index.php/seller/Goods/brandList">库存日志列表</a></li>
+                        </ul>
+                    </div>
+                    <form id="search-form2" method="post" action="">
+                        <input type="hidden" name="ctime" id="ctime" value="">
+                        <table class="search-form">
+                            <tbody><tr>
+                                <td></td>
+                                <th class="w70">日志类型</th>
+                                <td class="w70">
+                                    <select class="select" id="status" name="mtype">
+                                        <option value="">全部</option>
+                                        <option value="1">入库</option>
+                                        <option value="-1">出库</option>
+                                    </select>
+                                </td>
+                                <th class="w70">商品名称</th>
+                                <td class="w100"><input style="width: 90px;" class="text" type="text" placeholder="商品名称" value="" name="goods_name"></td>
+                                <th>开始时间</th>
+                                <td class="w100">
+                                    <input type="text" style="width: 90px;" class="text w90" id="start_time" value="" placeholder="记录开始时间">
+                                </td>
+                                <th>截止时间</th>
+                                <td class="w100">
+                                    <input type="text" style="width: 90px;" class="text w90" id="end_time" value="" placeholder="记录截止时间">
+                                </td>
+                                <td class="w70 tc"><label class="submit-border"><input type="button" onclick="check_form();" class="submit" value="搜索"></label></td>
+                            </tr>
+                        </tbody></table>
+                    </form>
+                    <table class="ncsc-default-table">
+                        <thead>
+                        <tr>
+                            <th class="w20"></th>
+                            <th class="w50">编号</th>
+                            <th class="w200 tl">商品名称</th>
+                            <th class="w100">商品规格</th>
+                            <th class="w100">订单号</th>
+                            <th class="w100">库存</th>
+                            <th class="w100">库存类型</th>
+                            <th class="w100">操作人</th>
+                            <th class="w100">日志时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                                            <tr class="bd-line">
+                                <td></td>
+                                <td>1</td>
+                                <td>缕缕货物</td>
+                                <td></td>
+                                <td>N/A</td>
+                                <td>100</td>
+                                <td>货品库存</td>
+                                <td></td>
+                                <td>2017-10-28 07:13:36</td>
+                            </tr>
+                                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="20">
+                                <div class="dataTables_paginate paging_simple_numbers"><ul class="pagination">    </ul></div>                    </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
         </div>
     </div>
 

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/crumbnav.css">
     <link rel="stylesheet" href="../css/seller_center.css">
@@ -84,7 +85,7 @@
             <div class="sidebar">
                 <div class="column-menu">
                     <ul id="seller_center_left_menu">
-                        <li class="current">
+                        <li class="">
                             <a href="index.html"> 商品发布</a>
                         </li>
                         <li class="">
@@ -99,7 +100,7 @@
                         <li class="">
                             <a href="specList.html"> 商品规格</a>
                         </li>
-                        <li class="">
+                        <li class="current">
                             <a href="brandList.html"> 品牌申请</a>
                         </li>
                     </ul>
@@ -110,22 +111,56 @@
             <div class="ncsc-path">
                 <i class="icon-desktop"></i>商家管理中心
                 <i class="icon-angle-right"></i>商品
-                <i class="icon-angle-right"></i>选择商品分类</div>
+                <i class="icon-angle-right"></i>出售中的商品</div>
             <!--面包屑导航-->
             <!--商品分类-->
-            <div class="wareSort clearfix">
-                <ul id="sort1"></ul>
-                <ul id="sort2" style="display: none;"></ul>
-                <ul id="sort3" style="display: none;"></ul>
-            </div>
-            <div class="selectedSort">
-                <b>您当前选择的商品类别是：</b>
-                <i id="selectedSort"></i>
-            </div>
-            <div class="wareSortBtn">
-                <input id="releaseBtn" type="button" value="下一步" disabled="disabled" />
-            </div>
-
+            <div class="main-content" id="mainContent">
+                    <div class="tabmenu">
+                        <ul class="tab pngFix">
+                            <li class="active"><a href="/index.php/seller/Goods/brandList">品牌申请列表</a></li>
+                        </ul>
+                        <a href="addEditBrand.html" class="ncbtn ncbtn-mint" title="添加品牌"><i class="icon-plus-sign"></i>添加品牌</a>
+                    </div>
+                    <div class="alert alert-block mt10">
+                        <ul class="mt5">
+                            <li>1、点击添加品牌按钮可以添加品牌</li>
+                        </ul>
+                    </div>
+                    <form id="search-form2" method="post" action="/index.php/seller/Goods/brandList">
+                        <table class="search-form">
+                            <tbody><tr>
+                                <td></td>
+                                <th class="w70">名称</th>
+                                <td class="w100"><input style="width: 90px;" class="text" type="text" placeholder="搜索词" value="" name="keyword"></td>
+                                <td class="w70 tc"><label class="submit-border"><input type="submit" class="submit" value="搜索"></label></td>
+                            </tr>
+                        </tbody></table>
+                    </form>
+                    <table class="ncsc-default-table">
+                        <thead>
+                        <tr>
+                            <th class="w20"></th>
+                            <th class="w50">ID</th>
+                            <th class="w200 tl">品牌名称</th>
+                            <th class="w100">Logo</th>
+                            <th class="w100">品牌分类</th>
+                            <th class="w100">状态</th>
+                            <th class="w100">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                                            <tr>
+                                <td colspan="20" class="norecord"><div class="warning-option"><i class="icon-warning-sign"></i><span>暂无符合条件的数据记录</span></div></td>
+                            </tr>
+                                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="20">
+                                                    </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
         </div>
     </div>
 

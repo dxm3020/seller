@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/crumbnav.css">
+    <link rel="stylesheet" href="../css/seller_center.css">
+    <link href="https://cdn.bootcss.com/font-awesome/3.0.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-blue">
+        <div class="container">
+            <img src="http://demo6.tp-shop.cn/public/static/images/seller/seller_center_logo.png" alt="" class="pull-left">
+            <div class="bred pull-left">
+                <div id='cssmenu'>
+                    <ul>
+                        <li>
+                            <a href='#'>首页</a>
+                        </li>
+                        <li class='active has-sub'>
+                            <a href='#'>商品</a>
+                            <ul>
+                                <li class='has-sub'>
+                                    <a href='#'>商品发布</a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 仓库中的商品 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 库存日志 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 商品规格 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 品牌申请 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href='#'>订单物流</a>
+                            <ul>
+                                <li class='has-sub'>
+                                    <a href='#'> 订单列表 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 虚拟订单 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'>拼团订单 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'>发货商品 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 品牌申请 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href='#'>促销</a>
+                        </li>
+                        <li>
+                            <a href='#'>店铺</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-left">
+            <div class="column-title" id="main-nav">
+                <span class="ico-goods"></span>
+                <h2>商品</h2>
+            </div>
+            <div class="sidebar">
+                <div class="column-menu">
+                    <ul id="seller_center_left_menu">
+                        <li class="current">
+                            <a href="index.html"> 商品发布</a>
+                        </li>
+                        <li class="">
+                            <a href="goodsList.html"> 出售中的商品</a>
+                        </li>
+                        <li class="">
+                            <a href="goods_offline"> 仓库中的商品</a>
+                        </li>
+                        <li class="">
+                            <a href="stock_list"> 库存日志</a>
+                        </li>
+                        <li class="">
+                            <a href="specList"> 商品规格</a>
+                        </li>
+                        <li class="">
+                            <a href="brandList"> 品牌申请</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="ncsc-path">
+                <i class="icon-desktop"></i>商家管理中心
+                <i class="icon-angle-right"></i>商品
+                <i class="icon-angle-right"></i>品牌申请
+            </div>
+            <div class="main-content" id="mainContent">
+                    <div class="tabmenu">
+                        <ul class="tab pngFix">
+                            <li class="normal"><a href="brandList.html">返回品牌申请列表</a></li>
+                            <li class="active"><a>新增/编辑品牌</a></li>
+                        </ul>
+                    </div>
+                    <div class="ncsc-form-default">
+                        <form method="post" id="addEditBrandForm" onsubmit="return checkName();">
+                            <input type="hidden" name="id" value="">
+                            <input type="hidden" name="p" value="">
+                            <dl>
+                                <dt><i class="required">*</i>品牌名称：</dt>
+                                <dd>
+                                    <input class="w400 text" type="text" value="" name="name" maxlength="30">
+                                    <span id="err_name" style="color:#F00; display:none;">品牌名称不能为空</span>
+                                    <p class="hint">请填写品牌名称</p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>品牌网址：</dt>
+                                <dd>
+                                    <input class="w400 text" type="text" value="" name="url" maxlength="30">
+                                    <p class="hint">请填写品牌网址</p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>所属分类：</dt>
+                                <dd>
+                                    <select name="cat_id1" id="cat_id1" onchange="get_category(this.value,'cat_id2','0');">
+                                        <option value="0">请选择分类</option>
+                                                                            <option value="1">手机 、 数码 、 通信</option>
+                                                                            <option value="2">家用电器</option>
+                                                                            <option value="3">电脑、办公</option>
+                                                                            <option value="4">家居、家具、家装、厨具</option>
+                                                                            <option value="5">男装、女装、童装、内衣</option>
+                                                                            <option value="6">个人化妆</option>
+                                                                            <option value="7">鞋、箱包、珠宝、手表</option>
+                                                                            <option value="8">运动户外</option>
+                                                                            <option value="9">汽车用品</option>
+                                                                            <option value="10">母婴用品、儿童玩具</option>
+                                                                            <option value="11">图书、音像、电子书</option>
+                                                                    </select>
+                                    <select name="cat_id2" id="cat_id2">
+                                        <option value="0">请选择分类</option>
+                                    </select>
+                                    <p class="hint">请选择所属分类</p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>品牌logo：</dt>
+                                <dd>
+                                    <div class="ncsc-goods-default-pic">
+                                        <div class="goodspic-uplaod">
+                                            <div class="upload-thumb">
+                                                <img id="logo2" src="/public/images/default_goods_image_240.gif">
+                                            </div>
+                                            <input value="" name="logo" id="logo" type="hidden">
+                                            <p class="hint">上传品牌logo</p>
+                                            <div class="handle">
+                                                <div class="ncsc-upload-btn">
+                                                    <a onclick="GetUploadify(1,'','brand','call_back');">
+                                                        <p><i class="icon-upload-alt"></i>图片上传</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="demo"></div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>品牌排序：</dt>
+                                <dd>
+                                    <input class="w400 text" type="text" value="" name="sort" maxlength="30" onpaste="this.value=this.value.replace(/[^\d]/g,'')" onkeyup="this.value=this.value.replace(/[^\d]/g,'')">
+                                    <p class="hint">品牌排序</p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>品牌描述：</dt>
+                                <dd>
+                                    <textarea name="desc" class="w400 tarea"></textarea>
+                                    <p class="hint">品牌描述</p>
+                                </dd>
+                            </dl>
+                            <div class="bottom"><label class="submit-border">
+                                <input type="submit" class="submit" value="提交"></label>
+                            </div>
+                        </form>
+                    </div>
+                    <script type="text/javascript">
+                        // 上传商品图片成功回调函数
+                        function call_back(fileurl_tmp){
+                            $("#logo").val(fileurl_tmp);
+                            $("#logo2").attr('src', fileurl_tmp);
+                        }
+                        // 判断输入框是否为空
+                        function checkName(){
+                            var name = $("#addEditBrandForm").find("input[name='name']").val();
+                            if($.trim(name) == '')
+                            {
+                                $("#err_name").show();
+                                return false;
+                            }
+                            return true;
+                        }
+                        window.onload = function(){
+                            var cat_id2 =  + '';
+                            if(cat_id2 > 0 ){
+                                get_category($("#cat_id1").val(),'cat_id2',cat_id2);
+                            }
+                        }
+                    </script>
+                </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://www.jq22.com/demo/jQueryNav201701142234/js/jquery-latest.min.js"></script>
+    <script src="http://www.jq22.com/demo/jQueryNav201701142234/js/jq22.js"></script>
+    <script>
+        function select_nav(obj) {
+            var data_id = $(obj).attr('data-id');
+            $('.ncsc-form-goods').hide();
+            $('#' + data_id).show();
+            $(obj).parent().parent().find('li').removeClass('active');
+            $(obj).parent().addClass('active');
+        }
+    </script>
+</body>
+
+</html>

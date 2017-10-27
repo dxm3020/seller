@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/crumbnav.css">
     <link rel="stylesheet" href="../css/seller_center.css">
@@ -84,7 +85,7 @@
             <div class="sidebar">
                 <div class="column-menu">
                     <ul id="seller_center_left_menu">
-                        <li class="current">
+                        <li class="">
                             <a href="index.html"> 商品发布</a>
                         </li>
                         <li class="">
@@ -96,7 +97,7 @@
                         <li class="">
                             <a href="stock_list.html"> 库存日志</a>
                         </li>
-                        <li class="">
+                        <li class="current">
                             <a href="specList.html"> 商品规格</a>
                         </li>
                         <li class="">
@@ -110,23 +111,60 @@
             <div class="ncsc-path">
                 <i class="icon-desktop"></i>商家管理中心
                 <i class="icon-angle-right"></i>商品
-                <i class="icon-angle-right"></i>选择商品分类</div>
+                <i class="icon-angle-right"></i>出售中的商品</div>
             <!--面包屑导航-->
             <!--商品分类-->
-            <div class="wareSort clearfix">
-                <ul id="sort1"></ul>
-                <ul id="sort2" style="display: none;"></ul>
-                <ul id="sort3" style="display: none;"></ul>
-            </div>
-            <div class="selectedSort">
-                <b>您当前选择的商品类别是：</b>
-                <i id="selectedSort"></i>
-            </div>
-            <div class="wareSortBtn">
-                <input id="releaseBtn" type="button" value="下一步" disabled="disabled" />
-            </div>
-
-        </div>
+            <div class="main-content" id="mainContent">
+                    <div class="tabmenu">
+                        <ul class="tab pngFix">
+                            <li class="active"><a href="/index.php/seller/Goods/specList">商品规格</a></li>
+                        </ul>
+                    </div>
+                    <div class="alert alert-block mt10">
+                        <ul class="mt5">
+                            <li>1、需要平台在对应的分类下添加绑定了规格名, 卖家这里才可以添加规格值. <a onclick="get_help(this)" id="get_help" data-url="http://www.tp-shop.cn/Doc/Indexbbc/article/id/1072/developer/user.html">查看使用说明</a></li>
+                        </ul>
+                    </div>
+                    <form method="post" onsubmit="return false;">
+                        <table class="search-form">
+                            <tbody><tr>
+                                <td></td>
+                                <th class="w70">商品分类</th>
+                                <td class="w250">
+                                    <select name="cat_id1" id="cat_id1" onchange="get_category(this.value,'cat_id2','0');" class="select w200">
+                                        <option value="">所有分类</option>
+                                                                            <option value="1">手机 、 数码 、 通信</option>
+                                                                            <option value="2">家用电器</option>
+                                                                            <option value="3">电脑、办公</option>
+                                                                            <option value="4">家居、家具、家装、厨具</option>
+                                                                            <option value="5">男装、女装、童装、内衣</option>
+                                                                            <option value="6">个人化妆</option>
+                                                                            <option value="7">鞋、箱包、珠宝、手表</option>
+                                                                            <option value="8">运动户外</option>
+                                                                            <option value="9">汽车用品</option>
+                                                                            <option value="10">母婴用品、儿童玩具</option>
+                                                                            <option value="11">图书、音像、电子书</option>
+                                                                    </select>
+                                </td>
+                                <td class="w250">
+                                    <select name="cat_id2" id="cat_id2" onchange="get_category(this.value,'cat_id3','0');" class="select w200">
+                                        <option value="0">请选择商品分类</option>
+                                    </select>
+                                </td>
+                                <td class="w250">
+                                    <select name="cat_id3" id="cat_id3" class="select w200">
+                                        <option value="0">请选择商品分类</option>
+                                    </select>
+                                </td>
+                                <td class="w70 tc"><label class="submit-border"><input type="submit" id="button-filter2" class="submit" value="添加规格"></label></td>
+                            </tr>
+                        </tbody></table>
+                    </form>
+                    <form id="SpecItemForm" method="post" action="/index.php/seller/Goods/batchAddSpecItem" onsubmit="return false">
+                        <div id="ajax_return"></div>
+                    </form>
+                </div>
+         </div>
     </div>
 
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
