@@ -70,6 +70,7 @@
     "vue-html-loader": "^1.2.3",
     "vue-loader": "^11.0.0",
     "vue-style-loader": "^1.0.0",
+    "vue-svg-icon": "^1.2.9",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.9.2",
