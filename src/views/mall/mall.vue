@@ -11,16 +11,13 @@
         <Step title="选择商品分类" icon="person-add"> </Step>
         <Step title="填写商品详情" icon="compose"></Step>
         <Step title="上传商品图片" icon="social-instagram-outline"></Step>
-        
         <Step title="商品发布成功" icon="checkmark-circled"></Step>
     </Steps>
-<Icon type=""></Icon>
-<Icon type=""></Icon>
-
+    <Icon type=""></Icon>
+    <Icon type=""></Icon>
     <div class="wareSort clearfix">
-		   
-    <Cascader :data='data' @on-change="handleChange" v-model='value1' ref="cascader">
-        <a href="javascript:void(0)" ref="image">选择</a>
+    <Cascader :data='data' @on-change="handleChange">
+        <a href="javascript:void(0)" ref="image">选择商品分类</a>
     </Cascader>
     
 	</div>
@@ -198,10 +195,8 @@
                 },1)
             }
         },
-            mounted () {
-            console.log(this.$refs.cascader.$refs)
-            this.$refs.cascader.$refs.reference.click()
-            }
-
+          mounted () {
+              this.$refs.image.click();
+           }
     }
 </script>

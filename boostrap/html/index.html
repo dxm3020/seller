@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/crumbnav.css">
+    <link href="https://cdn.bootcss.com/font-awesome/3.0.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-blue">
+        <div class="container">
+            <img src="http://demo6.tp-shop.cn/public/static/images/seller/seller_center_logo.png" alt="" class="pull-left">
+            <div class="bred pull-left">
+                <div id='cssmenu'>
+                    <ul>
+                        <li>
+                            <a href='#'>首页</a>
+                        </li>
+                        <li class='active has-sub'>
+                            <a href='#'>商品</a>
+                            <ul>
+                                <li class='has-sub'>
+                                    <a href='#'>商品发布</a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 仓库中的商品 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 库存日志 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 商品规格 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 品牌申请 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href='#'>订单物流</a>
+                            <ul>
+                                <li class='has-sub'>
+                                    <a href='#'> 订单列表 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 虚拟订单  </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'>拼团订单  </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'>发货商品 </a>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'> 品牌申请 </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href='#'>促销</a>
+                        </li>
+                        <li>
+                            <a href='#'>店铺</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-left">
+                <div class="column-title" id="main-nav"><span class="ico-goods"></span>
+                    <h2>商品</h2>
+                  </div>
+                <ul id="seller_center_left_menu">
+                        <li class="">
+                     <a href="/index.php/seller/Goods/addStepOne"> 商品发布</a>
+             </li>
+                      <li class="">
+                     <a href="/index.php/seller/Goods/goodsList"> 出售中的商品</a>
+             </li>
+                      <li class="">
+                     <a href="/index.php/seller/Goods/goods_offline"> 仓库中的商品</a>
+             </li>
+                      <li class="">
+                     <a href="/index.php/seller/Goods/stock_list"> 库存日志</a>
+             </li>
+                      <li class="">
+                     <a href="/index.php/seller/Goods/specList"> 商品规格</a>
+             </li>
+                      <li class="">
+                     <a href="/index.php/seller/Goods/brandList"> 品牌申请</a>
+             </li>
+                 </ul>
+        </div>
+        <div class="main-right">
+                <div class="ncsc-path"><i class="icon-desktop"></i>商家管理中心<i class="icon-angle-right"></i>商品<i class="icon-angle-right"></i>选择商品分类</div>
+                <!--面包屑导航-->
+        <!--商品分类-->
+        <div class="wareSort clearfix">
+            <ul id="sort1"></ul>
+            <ul id="sort2" style="display: none;"></ul>
+            <ul id="sort3" style="display: none;"></ul>
+        </div>
+        <div class="selectedSort"><b>您当前选择的商品类别是：</b><i id="selectedSort"></i></div>
+        <div class="wareSortBtn">
+            <input id="releaseBtn" type="button" value="下一步" disabled="disabled" />
+        </div>
+    
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://www.jq22.com/demo/jQueryNav201701142234/js/jquery-latest.min.js"></script>
+    <script src="http://www.jq22.com/demo/jQueryNav201701142234/js/jq22.js"></script>
+    <script src="../js/jquery.sort.js"></script>
+    <script>
+        $("#releaseBtn").on("click",function(){
+            location.href="addEditGoods.html";//跳转
+        })
+    </script>
+</body>
+
+</html>
