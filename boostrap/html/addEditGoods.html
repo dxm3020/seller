@@ -7,11 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/crumbnav.css">
     <link rel="stylesheet" href="../css/seller_center.css">
     <link href="https://cdn.bootcss.com/font-awesome/3.0.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .clabackkj h3 {
+    border-bottom: 0;
+    display: inline-block;
+}
+.alert-block {
+    margin-top: 0;
+}
+    .clabackkj .ncbtn{
+        float: right;
+    margin-right: 15px;
+    height: 12px;
+    line-height: 12px;
+    }
+    .ncsc-form-goods dl dd{
+        
+    }
+    </style>
 </head>
 
 <body>
@@ -297,7 +315,7 @@
                                     <div class="ncsc-goods-default-pic">
                                         <div class="goodspic-uplaod">
                                             <div class="upload-thumb">
-                                                <img id="original_img2" src="/public/images/default_goods_image_240.gif">
+                                                <img id="original_img2" src="../img/default_goods_image_240.gif">
                                             </div>
                                             <input name="original_img" id="original_img" value="" type="hidden">
                                             <p class="hint">上传商品默认主图，如多规格值时将默认使用该图或分规格上传各规格主图；支持jpg、gif、png格式上传或从图片空间中选择，建议使用
@@ -307,7 +325,7 @@
                                                     <a onclick="GetUploadify(1,'','goods','call_back');">
                                                         <p>
                                                             <i class="icon-upload-alt"></i>图片上传</p>
-                                                            <input type="file" onchange="wl(event)">
+                                                            <input type="file" class="upload-wl" onchange="wl(event)">
                                                     </a>
                                                 </div>
                                             </div>
@@ -443,23 +461,27 @@
                                           <p class="hint">兑换码过期后是否可以申请退款。</p>
                                         </dd>
                                     </dl>-->
-                            <h3 id="demo2">商品详情描述</h3>
+                            <!-- <h3 id="demo2">商品详情描述</h3> -->
                             <dl style="">
                                 <dt>商品详情描述：</dt>
                                 <dd style="">
                                     <p style="">
-                                       
+                                        <!--style给定宽度可以影响编辑器的最终宽度-->
+                                        <!--style给定宽度可以影响编辑器的最终宽度-->
+                                        <script type="text/plain" id="myEditor" style="width:870px;height:240px;">
+                                            <p>这里我可以写一些输入提示</p>
+                                        </script>
                                         </div>
                                         <textarea name="goods_content" class="txt" style="display: none;"></textarea>
                                     </p>
-                                    <p class="hint">商品详情描述</p>
+                                    <!-- <p class="hint">商品详情描述</p> -->
                                 </dd>
                             </dl>
                         </div>
 
                         <div class="ncsc-form-goods" id="tab_goods_images" style="display: none;">
                             <dl>
-                                <dd>
+                                <dd style="width:93%;">
                                     <div class="ncsc-form-goods-pic">
                                         <div class="container">
                                             <div class="ncsc-goodspic-list" style="opacity: 1;">
@@ -472,7 +494,7 @@
                                                     <li class="ncsc-goodspic-upload">
                                                         <div class="upload-thumb">
                                                             <a onclick="" href="#" target="_blank">
-                                                                <img nctype="file_0" src="/public/static/images/default_goods_image_240.gif">
+                                                                <img nctype="file_0" src="../img/default_goods_image_240.gif">
                                                             </a>
                                                             <input type="hidden" value="" name="goods_images[]" data-id="file_0">
                                                         </div>
@@ -494,35 +516,11 @@
                                                             </a>
                                                         </div>
                                                     </li>
+                                 
                                                     <li class="ncsc-goodspic-upload">
                                                         <div class="upload-thumb">
                                                             <a onclick="" href="#" target="_blank">
-                                                                <img nctype="file_1" src="/">
-                                                            </a>
-                                                            <input type="hidden" value="" name="goods_images[]" data-id="file_1">
-                                                        </div>
-                                                        <div class="show-default">
-                                                            <p>
-                                                                <i class="icon-ok-circle"></i>
-                                                            </p>
-                                                            <a title="移除" onclick="ClearPicArr2(this,'')" class="del" nctype="del" href="javascript:void(0)">X</a>
-                                                        </div>
-                                                        <div class="show-sort">排序 ：
-                                                            <input type="text" maxlength="1" size="1" class="text" name="img_sorts[]">
-                                                        </div>
-                                                        <div class="ncsc-upload-btn">
-                                                            <a href="javascript:void(0);" onclick="img_upload(10, 'file_1', 'goods', 'call_back2');">
-                                                                <span></span>
-
-                                                                <p>
-                                                                    <i class="icon-upload-alt"></i>上传</p>
-                                                            </a>
-                                                        </div>
-                                                    </li>
-                                                    <li class="ncsc-goodspic-upload">
-                                                        <div class="upload-thumb">
-                                                            <a onclick="" href="#" target="_blank">
-                                                                <img nctype="file_2" src="/public/static/images/default_goods_image_240.gif">
+                                                                <img nctype="file_2" src="../img/default_goods_image_240.gif">
                                                             </a>
                                                             <input type="hidden" value="" name="goods_images[]" data-id="file_2">
                                                         </div>
@@ -547,7 +545,7 @@
                                                     <li class="ncsc-goodspic-upload">
                                                         <div class="upload-thumb">
                                                             <a onclick="" href="#" target="_blank">
-                                                                <img nctype="file_3" src="/public/static/images/default_goods_image_240.gif">
+                                                                <img nctype="file_3" src="../img/default_goods_image_240.gif">
                                                             </a>
                                                             <input type="hidden" value="" name="goods_images[]" data-id="file_3">
                                                         </div>
@@ -572,7 +570,7 @@
                                                     <li class="ncsc-goodspic-upload">
                                                         <div class="upload-thumb">
                                                             <a onclick="" href="#" target="_blank">
-                                                                <img nctype="file_4" src="/public/static/images/default_goods_image_240.gif">
+                                                                <img nctype="file_4" src="../img/default_goods_image_240.gif">
                                                             </a>
                                                             <input type="hidden" value="" name="goods_images[]" data-id="file_4">
                                                         </div>
@@ -728,7 +726,16 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://www.jq22.com/demo/jQueryNav201701142234/js/jquery-latest.min.js"></script>
     <script src="http://www.jq22.com/demo/jQueryNav201701142234/js/jq22.js"></script>
+    <script type="text/javascript" src="../js/waypoints.js"></script>
+    <link href="../plug/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+
+    <script type="text/javascript" src="../plug/third-party/jquery.min.js"></script>
+    <script type="text/javascript" src="../plug/umeditor.config.js"></script>
+    <script type="text/javascript" src="../plug/umeditor.min.js"></script>
+    <script type="text/javascript" src="../plug/lang/zh-cn/zh-cn.js"></script>
+    <script src="../js/addEditGoods.js"></script>
     <script>
+         var um = UM.getEditor('myEditor');
         function select_nav(obj) {
             var data_id = $(obj).attr('data-id');
             $('.ncsc-form-goods').hide();

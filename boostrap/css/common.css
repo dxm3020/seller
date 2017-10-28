@@ -64,10 +64,8 @@ a {
 }
 .main {
   background: #f6f7fb;
- 
 }
 .main-left {
-  width: 270px;
   background: #f6f7fb;
   height: 100%;
   position: fixed;
@@ -108,5 +106,27 @@ a {
 }
 .column-title {
   text-align: center;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.upload-wl {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+.clabackkj {
+  background-color: #F5F5F5;
+  border-bottom: solid 1px #E7E7E7;
+  overflow: hidden;
+}
+input {
+  vertical-align: middle;
 }
 /*# sourceMappingURL=common.css.map */
