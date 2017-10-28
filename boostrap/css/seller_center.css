@@ -1985,6 +1985,7 @@ a:hover.ks-ext-close { text-decoration: none; color: #27A9E3;}
     border: 1px solid #E6E6E6;
     position: relative;
     z-index: 1;
+    height: 20px;
 }
 .dataTables_paginate li a {
     font: 600 12px/20px Verdana, Tahoma, Arial;
