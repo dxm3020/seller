@@ -64,6 +64,7 @@ a {
 }
 .main {
   background: #f6f7fb;
+  clear: both;
 }
 .main-left {
   background: #f6f7fb;
@@ -110,7 +111,6 @@ a {
 .container {
   width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
 }
 .upload-wl {
   position: absolute;

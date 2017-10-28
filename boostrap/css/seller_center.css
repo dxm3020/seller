@@ -1835,7 +1835,6 @@ a:hover.ks-ext-close { text-decoration: none; color: #27A9E3;}
 .ncsc-account-container-list li { font-size: 12px; line-height: 20px; vertical-align: middle; letter-spacing: normal; word-spacing: normal; display: inline-block; *display: inline/*IE7*/; width: 20%; height: 20px; margin-bottom: 5px; *zoom: 1;}
 
 /*返回顶部*/
-*{ padding: 0px; margin: 0px;}
 *html{ background-image: url(about:blank); background-attachment: fixed;}/*解决IE6下滚动抖动的问题*/
 #cti,
 #faq { display: none;}
