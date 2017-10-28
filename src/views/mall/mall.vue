@@ -19,11 +19,11 @@
     <Cascader :data='data' @on-change="handleChange">
         <a href="javascript:void(0)" ref="image">选择商品分类</a>
     </Cascader>
-    
 	</div>
 	<div class="selectedSort"><b>您当前选择的商品类别是：</b><i id="selectedSort"> {{text}}</i></div>
 	<div class="wareSortBtn">
-		<input id="releaseBtn" type="button" value="下一步" disabled="disabled" />
+		<router-link to="#"><input id="releaseBtn" type="button" value="下一步" disabled="disabled" /> 
+        </router-link>
 	</div>
    </div>
 </template>
@@ -33,6 +33,7 @@
 @import "./mall.less";
 </style>
 <script>
+  
     export default {
         
         data () {
@@ -189,11 +190,12 @@
        methods: {
             handleChange (value, selectedData) {
                 this.text = selectedData.map(o => o.label).join(', ');
-                var ivu=document.querySelector(".ivu-select-dropdown");
+                var ivu=document.querySelector(".ivu-cascader-menu");
                 setInterval(function(){
                     ivu.style.display="block";
                 },1)
-            }
+            },
+            
         },
           mounted () {
               this.$refs.image.click();

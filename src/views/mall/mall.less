@@ -57,8 +57,8 @@ a { text-decoration: none; color: #333; }
 /*主体部分*/
 .contains { width: 1000px; margin: 0 auto; }
 /*面包屑导航*/
-.crumbNav { padding: 18px 0; color: #323232; }
-.crumbNav a { color: #ed7f5a; }
+.crumbNav { padding: 18px 0; color: #666666; }
+.crumbNav a { color: #666666; }
 .crumbNav a:hover { color: #d95459; }
 .crumbNav font { padding: 0 2px; font-family: simsun; }
 /**选择商品分类**/
@@ -103,6 +103,12 @@ a { text-decoration: none; color: #333; }
 }
 .ivu-steps .ivu-steps-title {
     background: #f0f0f0 !important;
+}
+.ivu-steps-item.ivu-steps-status-process .ivu-steps-content, .ivu-steps-item.ivu-steps-status-process .ivu-steps-title {
+    color: #999 !important;
+}
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-title {
+    color: #666666 !important;
 }
 
 

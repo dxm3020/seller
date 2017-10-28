@@ -13,6 +13,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  z-index:999;
 }
 #cssmenu:after,
 #cssmenu > ul:after {

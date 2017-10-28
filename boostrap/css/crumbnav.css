@@ -46,6 +46,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    text-decoration: none;
 }
 
 .wareSort ul li a:hover {

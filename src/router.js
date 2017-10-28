@@ -80,7 +80,7 @@ export const appRouter = [
     {
         path: '/sort',
         icon: 'android-sad',
-        title: ' 出售中的商品',
+        title: '出售中的商品',
         name: 'sort',
         component: Main,
         children: [
@@ -89,14 +89,14 @@ export const appRouter = [
     },
     
     {
-        path: '/access',
-        redirect: '/access/index',
+        path: '/tab',
+        // redirect: '/access/index',
         icon: 'key',
-        name: 'access',
+        name: 'tab',
         title: ' 仓库中的商品',
         component: Main,
         children: [
-            { path: 'index', title: '权限管理', name: 'access_index', component: resolve => { require(['./views/access/access.vue'], resolve); } }
+            { path: 'index', title: '权限管理', name: 'tab', component: resolve => { require(['./views/tab/tab.vue'], resolve); } }
         ]
     },
     {
